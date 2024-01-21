@@ -15,7 +15,7 @@
 */
 
   :root {
-    --main-font: 'Inter', sans-serif;
+    --main-font: 'inter-Variable', sans-serif;
     --sub-font: 'PressStart2P', sans-serif;
     --weight-main-font: 400;
     --weight-sub-font: 700;
@@ -23,6 +23,8 @@
     --Themes-background: #FFFFFF;
     --heart-red: #ff0000;
     --heart-black: #000;
+    --text-bg: #fff;
+    --text-color: #000;
     --bg-image: linear-gradient(to bottom, #E7E7E7, #1A1A1A);
   }
 
@@ -36,8 +38,7 @@
   justify-content: center;
   font-style: normal;
   font-family: var(--main-font);
-  font-weight: var(--weight-main-font);
-  font-variation-settings:var(--weight-main-font);
+  font-variation-settings: "wght" 400;
   color: var(--Themes-mainColor);
   background-color: var(--Themes-background);
   background-attachment: fixed;
@@ -48,4 +49,245 @@
   background: repeating-linear-gradient(to right, #d3d3d3 , #d3d3d3 2px, transparent, transparent 2px),
               repeating-linear-gradient(to bottom, #d3d3d3, #d3d3d3 2px, transparent, transparent 2px), 
               var(--bg-image);
+}
+
+@supports (font-variation-settings: normal) {
+  .page {
+      font-family: 'inter-Variable', sans-serif;
+  }
+}
+.header {
+  border: 2px solid var(--Themes-mainColor);
+  background-color: var(--Themes-background);
+  font-family: var(--sub-font);
+}
+
+.header__logo {
+  color: var(--Themes-mainColor);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+}
+
+.header__subtitle {
+  color: var(--Themes-mainColor);
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+}
+
+.theme-menu__button {
+  color: var(--Themes-mainColor);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  outline: 0;
+}
+
+.section {
+  border: 2px solid var(--Themes-mainColor);
+  background-color: var(--Themes-background);
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+
+.label__text {
+  transition: 1s ease-in-out;
+  color: var(--Themes-mainColor);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--Themes-background);
+  font-family: var(--sub-font);
+  font-size: 14px;
+  text-transform: uppercase;
+  mix-blend-mode: hard-light;
+}
+
+.card__like-button {
+  background-color: var(--Themes-background);
+  border: 2px solid var(--Themes-mainColor);
+  font-family: var(--sub-font);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 90%;
+  text-decoration: none;
+  outline: 0;
+  transition: 0.3s ease-in-out 0s;
+}
+
+.button__text {
+  color: var(--text-color);
+  background-color: var(--text-bg);
+  mix-blend-mode: difference;
+}
+
+/* Heart */
+.card__icon-button {
+  background-color: transparent;
+  border: 2px solid transparent;
+  outline: 0;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.card__icon-button:focus-visible {
+  border-color: 2px solid var(--Themes-mainColor);
+}
+
+.like-icon
+.main-body {
+  fill: transparent;
+}
+
+.heart,
+.main-body,
+.sparks,
+.core {
+fill: none;
+}
+
+.contour {
+  fill:var(--heart-black);
+}
+
+.like-icon.is-liked .contour {
+  fill:var(--heart-red)
+}
+.heart:hover .contour
+.main-body .core {
+  cursor: pointer;
+  transition: fill 0.3s ease-in-out;
+}
+
+.heart:hover .main-body {
+  fill: var(--heart-black);
+  transition: fill 0.3s ease-in-out; 
+}
+
+.heart:hover .core {
+  fill: var(--heart-black);
+  transition-duration: 0.1s;
+}
+
+.like-icon.is-liked .sparks {
+  fill: var(--heart-red);
+  animation: sparksVis 0.3s ease-in-out forwards 0.3s;
+}
+
+.like-icon.is-liked .main-body {
+  transition-delay: 0.1s;
+  fill: var(--heart-red);
+  animation: heartUP 0.1s ease-in-out;
+}
+
+.like-icon:focus-visible
+.contour:focus-visible
+.main-body:focus-visible
+.core:focus-visible {
+  fill: var(--heart-black);
+}
+
+.like-icon.is-liked
+.contour
+.main-body
+.core {
+  fill:var(--heart-red);
+  animation: heartUP 0.3s ease-in-out;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--heart-red);
+}
+
+.footer {
+  background-color: var(--Themes-background);
+  border: 2px solid var(--Themes-mainColor);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.footer__button {
+  border: 2px solid var(--Themes-mainColor);
+  background-color: var(--Themes-background);
+}
+
+.footer__text {
+  font-family: var(--sub-font);
+  font-size: 14px;
+  color: var(--Themes-background);
+  background-color: var(--Themes-mainColor);
+  z-index: 1;
+  mix-blend-mode: difference;
+}
+
+#dialog__id {
+  transition: opacity 0.3s ease-in-out;
+  background-color: var(--Themes-background);
+}
+
+#dialog__id::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+.dialog__content {
+  color: var(--Themes-mainColor);
+  font-family: var(--sub-font);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+  text-transform: uppercase;
+}
+
+.dialog__button {
+  font-family: var(--sub-font);
+  font-size: 14px;
+  text-transform: uppercase;
+  border: 2px solid var(--Themes-mainColor);
+  background: var(--Themes-background);
+  color: var(--Themes-mainColor);
+}
+
+.floppy {
+  fill: var(--Themes-background);
+  z-index: 1;
+  mix-blend-mode: difference;
+}
+
+
+.street__img {
+  filter: blur(3px);
+}
+
+.rock__img {
+  filter: grayscale(5);
+}
+
+.sands__img {
+  filter: brightness(2);
+}
+
+.beach__img {
+  filter: sepia(3);
+}
+
+.sea__img {
+  filter:contrast(2);
+}
+
+.car__img {
+  filter: grayscale(1) invert(1);
+}
+
+.table__img {
+  filter: blur(1px);
+}
+
+.snow__img {
+  filter: contrast(2);
 }

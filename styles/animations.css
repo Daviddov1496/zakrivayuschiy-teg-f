@@ -19,7 +19,7 @@
     height: 3px;
     margin-block-start: 3px;
     background-color: var(--Themes-mainColor);
-    transition: all 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .theme-menu__button:focus:after {
@@ -72,7 +72,7 @@
         width: 0;
     }
     100% {
-        width: 100%; 
+        width: 100%;
     }
 }
 
@@ -82,15 +82,15 @@
       opacity: 1;
     }
     100% {
-      opacity: 0;  
+      opacity: 0;
     }
   }
 /* Увеличение сердца */
 @keyframes heartUP {
-    0%{
+    0% {
         transform: scale(1);
     }
-    100%{
+    100% {
         transform: scale(1.5);
     }
 }

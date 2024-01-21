@@ -13,19 +13,9 @@
     --Themes-background: #000;
     --heart-red: #ff0000;
     --heart-black: #00CC14;
+    --text-bg: #000;
+    --text-color: #00CC14;
     --bg-image: linear-gradient(to bottom, #007f0c, #004306);
-}
-
-.theme-dark .button__text {
-    position: relative;
-    z-index: 1;
-    color: var(--Themes-mainColor);
-    background-color: var(--Themes-background);
-}
-
-.theme-dark .page{
-    background: repeating-linear-gradient(to right, #000 , #000 2px, transparent, transparent 4px),
-    repeating-linear-gradient(to bottom, #000, #000 2px, transparent, transparent 4px), var(--bg-image);
 }
 
 :root.theme-light {
@@ -37,7 +27,37 @@
     --Themes-background: #FFF;
     --heart-red: #ff0000;
     --heart-black: #000;
+    --text-bg: #fff;
+    --text-color: #000;
     --bg-image: linear-gradient(to bottom, #E7E7E7, #1A1A1A);
+}
+
+.theme-light .button__text {
+    position: relative;
+    z-index: 1;
+    color: var(--text-bg);
+    background-color: var(--text-color);
+}
+
+.theme-light .footer__text {
+    color: var(--text-bg);
+    background-color: var(--text-color);
+}
+
+.theme-light .floppy {
+    fill: var(--Themes-background);
+}
+
+.theme-dark .button__text {
+    position: relative;
+    z-index: 1;
+    color: var(--text-color);
+    background-color: var(--text-bg);
+}
+
+.theme-dark .page {
+    background: repeating-linear-gradient(to right, #000 , #000 2px, transparent, transparent 4px),
+    repeating-linear-gradient(to bottom, #000, #000 2px, transparent, transparent 4px), var(--bg-image);
 }
 
 @media (prefers-color-scheme: light) {
@@ -50,6 +70,8 @@
         --Themes-background: #FFF;
         --heart-red: #ff0000;
         --heart-black: #000;
+        --text-bg: #fff;
+        --text-color: #000;
         --bg-image: linear-gradient(to bottom, #E7E7E7, #1A1A1A);
     }
 
@@ -57,6 +79,28 @@
         background: repeating-linear-gradient(to right, #d3d3d3 , #d3d3d3 2px, transparent, transparent 4px),
               repeating-linear-gradient(to bottom, #d3d3d3, #d3d3d3 2px, transparent, transparent 4px), 
               var(--bg-image);
+    }
+
+    .button__text {
+        position: relative;
+        z-index: 1;
+        color: var(--text-bg);
+        background-color: var(--text-color);
+    }
+
+    .theme-dark .footer__text{
+        color: var(--text-color);
+        background-color: var(--text-bg);
+    }
+    .theme-dark .floppy {
+        fill: var(--text-color);
+    }
+
+    .theme-dark .button__text {
+        position: relative;
+        z-index: 1;
+        color: var(--text-color);
+        background-color: var(--text-bg);
     }
 }
 
@@ -70,29 +114,37 @@
         --Themes-background: #000;
         --heart-red: #ff0000;
         --heart-black: #00CC14;
+        --text-bg: #000;
+        --text-color: #00CC14;
         --bg-image: linear-gradient(to bottom, #007f0c, #004306);
     }
 
-    .page{
+    .page {
         background: repeating-linear-gradient(to right, #000 , #000 2px, transparent, transparent 4px),
         repeating-linear-gradient(to bottom, #000, #000 2px, transparent, transparent 4px), var(--bg-image);
     }
 
     #favicon {
-        fill: var(--Themes-mainColor);
+        fill: var(--text-color);
     }
+    
     .button__text {
         position: relative;
         z-index: 1;
-        color: var(--Themes-mainColor);
-        background-color: var(--Themes-background);
+        color: var(--text-color);
+        background-color: var(--text-bg);
     }
+
+    #dialog__id {
+        border: 2px solid var(--Themes-mainColor);
+    }
+
     .footer__text {
-        color: var(--Themes-mainColor);
-        background-color: var(--Themes-background);
+        color: var(--text-color);
+        background-color: var(--text-bg);
     }
 
     .floppy {
-        fill: var(--Themes-mainColor); 
+        fill: var(--Themes-mainColor);
     }
 }
