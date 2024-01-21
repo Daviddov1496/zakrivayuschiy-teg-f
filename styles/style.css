@@ -14,7 +14,38 @@
 
 */
 
+  :root {
+    --main-font: 'Inter', sans-serif;
+    --sub-font: 'PressStart2P', sans-serif;
+    --weight-main-font: 400;
+    --weight-sub-font: 700;
+    --Themes-mainColor: #000;
+    --Themes-background: #FFFFFF;
+    --heart-red: #ff0000;
+    --heart-black: #000;
+    --bg-image: linear-gradient(to bottom, #E7E7E7, #1A1A1A);
+  }
+
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  font-family: var(--main-font);
+  font-weight: var(--weight-main-font);
+  font-variation-settings:var(--weight-main-font);
+  color: var(--Themes-mainColor);
+  background-color: var(--Themes-background);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /*ниже гардиент*/
+  background: repeating-linear-gradient(to right, #d3d3d3 , #d3d3d3 2px, transparent, transparent 2px),
+              repeating-linear-gradient(to bottom, #d3d3d3, #d3d3d3 2px, transparent, transparent 2px), 
+              var(--bg-image);
 }

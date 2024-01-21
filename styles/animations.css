@@ -6,9 +6,102 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+/* подчеркивание меню */
+.theme-menu__button:after {
+    display: block;
+    content: '';
+    width: 0%;
+    height: 3px;
+    margin-block-start: 3px;
+    background-color: var(--Themes-mainColor);
+    transition: all 0.3s ease-in-out;
+}
+
+.theme-menu__button:focus:after {
+    width: 100%;
+}
+
+/* стрелочка меню */
+.theme-menu__button:disabled::before { /*ведет себя очень странно !!!Исправить!!!*/
+    position: absolute;
+    content: "▶";
+    display: flex;
+    left: -1rem;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    animation: pointer-animation 0.3s infinite ease-in-out alternate;
+}
+
+@keyframes pointer-animation {
+    0% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(4px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+}
+
+/* смена цвета кнопки Like */
+.card__like-button:focus {
+    box-shadow: 2px 2px 0px 0px #000;
+}
+
+.card__like-button:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--Themes-mainColor);
+    animation: like-hover 0.3s linear forwards;
+}
+
+
+@keyframes like-hover {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%; 
+    }
+}
+
+/* Искры от сердца */
+@keyframes sparksVis {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;  
+    }
+  }
+/* Увеличение сердца */
+@keyframes heartUP {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}
+
+.footer__button:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--Themes-mainColor);
+    animation: like-hover 0.3s linear forwards;
+}

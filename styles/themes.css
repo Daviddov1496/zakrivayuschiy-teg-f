@@ -4,3 +4,95 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+:root.theme-dark {
+    --main-font: 'Inter', sans-serif;
+    --sub-font: 'PressStart2P', sans-serif;
+    --weight-main-font: 400;
+    --weight-sub-font: 700;
+    --Themes-mainColor: #00CC14;
+    --Themes-background: #000;
+    --heart-red: #ff0000;
+    --heart-black: #00CC14;
+    --bg-image: linear-gradient(to bottom, #007f0c, #004306);
+}
+
+.theme-dark .button__text {
+    position: relative;
+    z-index: 1;
+    color: var(--Themes-mainColor);
+    background-color: var(--Themes-background);
+}
+
+.theme-dark .page{
+    background: repeating-linear-gradient(to right, #000 , #000 2px, transparent, transparent 4px),
+    repeating-linear-gradient(to bottom, #000, #000 2px, transparent, transparent 4px), var(--bg-image);
+}
+
+:root.theme-light {
+    --main-font: 'Inter', sans-serif;
+    --sub-font: 'PressStart2P', sans-serif;
+    --weight-main-font: 400;
+    --weight-sub-font: 700;
+    --Themes-mainColor: #000;
+    --Themes-background: #FFF;
+    --heart-red: #ff0000;
+    --heart-black: #000;
+    --bg-image: linear-gradient(to bottom, #E7E7E7, #1A1A1A);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --main-font: 'Inter', sans-serif;
+        --sub-font: 'PressStart2P', sans-serif;
+        --weight-main-font: 400;
+        --weight-sub-font: 700;
+        --Themes-mainColor: #000;
+        --Themes-background: #FFF;
+        --heart-red: #ff0000;
+        --heart-black: #000;
+        --bg-image: linear-gradient(to bottom, #E7E7E7, #1A1A1A);
+    }
+
+    .page {
+        background: repeating-linear-gradient(to right, #d3d3d3 , #d3d3d3 2px, transparent, transparent 4px),
+              repeating-linear-gradient(to bottom, #d3d3d3, #d3d3d3 2px, transparent, transparent 4px), 
+              var(--bg-image);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-font: 'Inter', sans-serif;
+        --sub-font: 'PressStart2P', sans-serif;
+        --weight-main-font: 400;
+        --weight-sub-font: 700;
+        --Themes-mainColor: #00CC14;
+        --Themes-background: #000;
+        --heart-red: #ff0000;
+        --heart-black: #00CC14;
+        --bg-image: linear-gradient(to bottom, #007f0c, #004306);
+    }
+
+    .page{
+        background: repeating-linear-gradient(to right, #000 , #000 2px, transparent, transparent 4px),
+        repeating-linear-gradient(to bottom, #000, #000 2px, transparent, transparent 4px), var(--bg-image);
+    }
+
+    #favicon {
+        fill: var(--Themes-mainColor);
+    }
+    .button__text {
+        position: relative;
+        z-index: 1;
+        color: var(--Themes-mainColor);
+        background-color: var(--Themes-background);
+    }
+    .footer__text {
+        color: var(--Themes-mainColor);
+        background-color: var(--Themes-background);
+    }
+
+    .floppy {
+        fill: var(--Themes-mainColor); 
+    }
+}
