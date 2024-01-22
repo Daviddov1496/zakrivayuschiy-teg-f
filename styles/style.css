@@ -102,7 +102,7 @@
 .label__text {
   transition: 1s ease-in-out;
   color: var(--Themes-mainColor);
-  text-shadow: 1px var(--Themes-background);
+  -webkit-text-stroke: 1px var(--Themes-background);
   font-family: var(--sub-font);
   font-size: 14px;
   text-transform: uppercase;
