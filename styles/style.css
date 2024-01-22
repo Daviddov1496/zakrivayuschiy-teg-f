@@ -110,7 +110,7 @@
 }
 
 @supports (text-stroke: 1px var(--Themes-background)) or (-webkit-text-stroke: 1px var(--Themes-background)) {
-  .label__text{
+  .label__text {
   -webkit-text-stroke: 1px var(--Themes-background);
   text-stroke: 1px var(--Themes-background);
   text-shadow: none;
