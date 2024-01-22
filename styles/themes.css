@@ -122,6 +122,7 @@
     .page {
         background: repeating-linear-gradient(to right, #000 , #000 2px, transparent, transparent 4px),
         repeating-linear-gradient(to bottom, #000, #000 2px, transparent, transparent 4px), var(--bg-image);
+        font-variation-settings: 'wght' 465, 'slnt' 0;
     }
 
     #favicon {
