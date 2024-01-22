@@ -110,6 +110,10 @@
   mix-blend-mode: hard-light;
 }
 
+@supports (-webkit-text-stroke-width: 1px) and (-webkit-text-stroke-color: var(--Themes-background)) {
+  text-shadow: 1px var(--Themes-background);
+}
+
 .card__like-button {
   background-color: var(--Themes-background);
   border: 2px solid var(--Themes-mainColor);
@@ -159,6 +163,7 @@ fill: none;
 .like-icon.is-liked .contour {
   fill:var(--heart-red)
 }
+
 .heart:hover .contour
 .main-body .core {
   cursor: pointer;
@@ -167,7 +172,7 @@ fill: none;
 
 .heart:hover .main-body {
   fill: var(--heart-black);
-  transition: fill 0.3s ease-in-out; 
+  transition: fill 0.3s ease-in-out;
 }
 
 .heart:hover .core {
@@ -208,7 +213,7 @@ fill: none;
 .footer {
   background-color: var(--Themes-background);
   border: 2px solid var(--Themes-mainColor);
-  transition: all 0.3s ease-in-out 0s;
+  transition: 0.3s ease-in-out 0s;
 }
 
 .footer__button {
