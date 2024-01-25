@@ -53,7 +53,7 @@
 
 @supports (-webkit-text-stroke: 1px var(--accent-color)) {
     .label__text {
-      -webkit-text-stroke: 1px var(--accent-color); 
+      -webkit-text-stroke: 1px var(--accent-color);
     }
   }
   
@@ -113,7 +113,7 @@
     fill: var(--liked-heart-color);
   }
 
-  .heart:active .main-body{
+  .heart:active .main-body {
     fill: var(--liked-heart-color);
   }
   
