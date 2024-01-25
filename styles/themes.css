@@ -13,7 +13,7 @@
     --hover-heart-color: #00CC14;
     --text-bg: #000;
     --text-color: #00CC14;
-    --bg-image: linear-gradient(to bottom, #007f0c 0.01%, #004306);
+    --bg-image: repeating-linear-gradient(to bottom,#000, #000 2px, transparent,  transparent 4px),repeating-linear-gradient(to right,#000, #000 2px, transparent,  transparent 4px), linear-gradient(to bottom, #007f0c 0.01%, #004306 100%);
 }
 
 :root.theme-light {
@@ -25,23 +25,7 @@
     --hover-heart-color: #000;
     --text-bg: #fff;
     --text-color: #000;
-    --bg-image: linear-gradient(to bottom, #E7E7E7 0.01%, #1A1A1A);
-}
-
-/* стили ниже нужны для корректного переопределения цветов */
-
-.theme-light .button__text {
-    color: var(--text-bg);
-    background-color: var(--text-color);
-}
-
-.theme-light .floppy {
-    fill: var(--accent-color);
-}
-
-.theme-dark .page {
-    background: repeating-linear-gradient(to right, #000 , #000 2px, transparent, transparent 4px),
-    repeating-linear-gradient(to bottom, #000, #000 2px, transparent, transparent 4px), var(--bg-image);
+    --bg-image: repeating-linear-gradient(to bottom,#d3d3d3, #d3d3d3 2px, transparent,  transparent 4px),repeating-linear-gradient(to right,#d3d3d3, #d3d3d3 2px, transparent,  transparent 4px), linear-gradient(to bottom, #E7E7E7 0.01%, #1A1A1A 100%);
 }
 
 @media (prefers-color-scheme: light) {
@@ -54,13 +38,7 @@
         --hover-heart-color: #000;
         --text-bg: #fff;
         --text-color: #000;
-        --bg-image: linear-gradient(to bottom , #E7E7E7 0.01%, #1A1A1A);
-    }
-
-    .page {
-        background: repeating-linear-gradient(to right, #d3d3d3 , #d3d3d3 2px, transparent, transparent 4px),
-              repeating-linear-gradient(to bottom, #d3d3d3, #d3d3d3 2px, transparent, transparent 4px), 
-              var(--bg-image);
+        --bg-image: repeating-linear-gradient(to bottom,#d3d3d3, #d3d3d3 2px, transparent,  transparent 4px),repeating-linear-gradient(to right,#d3d3d3, #d3d3d3 2px, transparent,  transparent 4px), linear-gradient(to bottom,#E7E7E7 0.01%, #1A1A1A 100%);
     }
 
     .button__text {
@@ -79,8 +57,6 @@
     }
 
     .theme-dark .button__text {
-        position: relative;
-        z-index: 1;
         color: var(--text-color);
         background-color: var(--text-bg);
     }
@@ -96,13 +72,7 @@
         --hover-heart-color: #00CC14;
         --text-bg: #000;
         --text-color: #00CC14;
-        --bg-image: linear-gradient(to bottom, #007f0c 0.01%, #004306);
-    }
-
-    .page {
-        background: repeating-linear-gradient(to right, #000 , #000 2px, transparent, transparent 4px),
-        repeating-linear-gradient(to bottom, #000, #000 2px, transparent, transparent 4px), var(--bg-image);
-        font-variation-settings: 'wght' 465, 'slnt' 0;
+        --bg-image: repeating-linear-gradient(to bottom,#000, #000 2px, transparent,  transparent 4px),repeating-linear-gradient(to right,#000, #000 2px, transparent,  transparent 4px), linear-gradient(to bottom, #007f0c 0.01%, #004306 100%);
     }
 
     #favicon {

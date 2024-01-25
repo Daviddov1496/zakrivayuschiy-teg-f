@@ -10,7 +10,7 @@
     --hover-heart-color: #000;
     --text-bg: #fff;
     --text-color: #000;
-    --bg-image: linear-gradient(to bottom, #E7E7E7 0.01%, #1A1A1A);
+    --bg-image: repeating-linear-gradient(to bottom,#d3d3d3, #d3d3d3 2px, transparent,  transparent 4px),repeating-linear-gradient(to right,#d3d3d3, #d3d3d3 2px, transparent,  transparent 4px), linear-gradient(to bottom, #E7E7E7 0.01%, #1A1A1A 100%);
 }
 
 .header {
@@ -43,6 +43,10 @@
 
 .section__title {
     font-variation-settings: "wgth" var(--wght-title);
+}
+
+.image__container {
+  outline: 2px solid var(--main-color);
 }
 
 .label__text {
