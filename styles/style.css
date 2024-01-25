@@ -22,7 +22,6 @@
   justify-content: center;
   font-style: normal;
   font-family: var(--main-font);
-  font-variation-settings: "wght" 400;
   color: var(--main-color);
   background-color: var(--accent-color);
   background-attachment: fixed;
