@@ -46,7 +46,7 @@
 }
 
 .image__container {
-  outline: 2px solid var(--main-color);
+    outline: 2px solid var(--main-color);
 }
 
 .label__text {
@@ -67,39 +67,38 @@
     }
   }
 
-  .button__style {
-    background-color: var(--accent-color);
-    border: 2px solid var(--main-color);
-    font-family: var(--sub-font);
-    font-variation-settings: "wght" var(--wght-text);
-  }
+.button__style {
+  background-color: var(--text-bg);
+  border: 2px solid var(--main-color);
+  font-family: var(--sub-font);
+  font-variation-settings: "wght" var(--wght-text);
+}
 
-  .button__style:focus {
-    box-shadow: 2px 2px 0px 0px var(--main-color);
-  }
+.button__style:focus {
+  box-shadow: 2px 2px 0px 0px var(--main-color);
+}
 
-  .button__text {
-    color: var(--text-color);
-    background-color: var(--text-bg);
-    mix-blend-mode: difference;
-    font-variation-settings: "wght" var(--wght-text);
-  }
+.button__text {
+  color: var(--text-bg);
+  mix-blend-mode: difference;
+  font-variation-settings: "wght" var(--wght-text);
+}
 
-  .button__style:before {
-    background-color: var(--text-color);
-  }
+.button__style:before {
+  background-color: var(--text-color);
+}
 
-  .card__icon-button:focus-visible {
-    border-color: 2px solid var(--main-color);
-  }
+.card__icon-button:focus-visible {
+  border-color: 2px solid var(--main-color);
+}
 
-  .contour {
-    fill: var(--hover-heart-color);
-  }
+.contour {
+  fill: var(--hover-heart-color);
+}
   
-  .like-icon.is-liked .contour {
-    fill: var(--liked-heart-color);
-  }
+.like-icon.is-liked .contour {
+  fill: var(--liked-heart-color);
+}
 
   .heart:hover .main-body {
     fill: var(--hover-heart-color);
@@ -135,6 +134,7 @@
 
   #dialog__id {
     background-color: var(--accent-color);
+    border: 2px solid var(--main-color);
   }
 
   .dialog__content {
@@ -150,15 +150,5 @@
   }
   
   .floppy {
-    fill: var(--main-color);
-    mix-blend-mode: difference;
+    fill: var(--text-bg);
   }
-/* стили ниже нужны для корректного переопределения цветов */
-.theme-light .button__text {
-    color: var(--text-bg);
-    background-color: var(--text-color);
-}
-
-.theme-light .floppy {
-    fill: var(--accent-color);
-}
