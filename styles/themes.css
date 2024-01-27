@@ -8,7 +8,7 @@
     --wght-title: 765;
     --wght-text: 465;
     --main-color: #00CC14;
-    --accent-color: #000;
+    --accent-color:#1bc915;
     --liked-heart-color: #ff0000;
     --hover-heart-color: #00CC14;
     --text-bg: #000;
@@ -40,15 +40,6 @@
         --text-color: #000;
         --bg-image: repeating-linear-gradient(to bottom,#d3d3d3, #d3d3d3 2px, transparent,  transparent 4px),repeating-linear-gradient(to right,#d3d3d3, #d3d3d3 2px, transparent,  transparent 4px), linear-gradient(to bottom,#E7E7E7 0.01%, #1A1A1A 100%);
     }
-        
-    .theme-dark .button__text {
-        color: var(--text-color);
-        background-color: var(--text-bg);
-    }
-
-    .theme-dark .floppy {
-        fill: var(--text-color);
-    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -56,30 +47,11 @@
         --wght-title: 765;
         --wght-text: 465;
         --main-color: #00CC14;
-        --accent-color: #000;
+        --accent-color:#1bc915;
         --liked-heart-color: #ff0000;
         --hover-heart-color: #00CC14;
         --text-bg:  #000;
         --text-color: #00CC14;
         --bg-image: repeating-linear-gradient(to bottom,#000, #000 2px, transparent,  transparent 4px),repeating-linear-gradient(to right,#000, #000 2px, transparent,  transparent 4px), linear-gradient(to bottom, #007f0c, #004306 100%);
-    }
-
-    
-    .button__text {
-        color: var(--text-color);
-        background-color: var(--text-bg);
-    }
-
-    .theme-light .button__text {
-        color: var(--text-bg);
-        background-color: var(--text-color);
-    }
-
-    .floppy {
-        fill: var(--text-color);
-    }
-
-    .theme-light .floppy {
-        fill: var(--text-bg);
     }
 }
