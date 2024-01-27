@@ -59,7 +59,7 @@
         --accent-color: #000;
         --liked-heart-color: #ff0000;
         --hover-heart-color: #00CC14;
-        --text-bg:  #000; 
+        --text-bg:  #000;
         --text-color: #00CC14;
         --bg-image: repeating-linear-gradient(to bottom,#000, #000 2px, transparent,  transparent 4px),repeating-linear-gradient(to right,#000, #000 2px, transparent,  transparent 4px), linear-gradient(to bottom, #007f0c, #004306 100%);
     }
@@ -81,5 +81,5 @@
 
     .theme-light .floppy {
         fill: var(--text-bg);
-    } 
+    }
 }
