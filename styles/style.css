@@ -454,15 +454,15 @@
 }
 
 .car__img {
-  filter: grayscale(1) invert(1);
+  filter: grayscale(1) contrast(2);
 }
 
 .table__img {
   filter: blur(1px);
 }
 
-.snow__img {
-  filter: contrast(6);
+.moon__img {
+  filter: invert(1);
 }
 
 @media (width <= 700px) {
