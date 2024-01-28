@@ -22,6 +22,7 @@
   justify-content: center;
   font-style: normal;
   font-family: var(--main-font);
+  font-variation-settings: "wght" var(--wght-text);
   color: var(--main-color);
   background-color: var(--accent-color);
   background: var(--bg-image);
@@ -40,7 +41,7 @@
 .header {
   width: 696px;
   height: 364px;
-  margin-block-start: 100px;
+  margin-block-start: 105px;
   margin-block-end: 60px;
   display: grid;
   grid-template-rows: 136px auto auto auto;
@@ -146,13 +147,11 @@
 .section {
   display: grid;
   grid-template-rows: repeat(5, auto);
-  font-style: normal;
   line-height: 21px;
   max-width: 696px;
   margin-block-start: 50px;
   border: 2px solid var(--main-color);
   background-color: var(--text-bg);
-  font-family: var(--main-font);
 }
 
 .section__title {
@@ -250,7 +249,6 @@
   background-color: var(--text-bg);
   border: 2px solid var(--main-color);
   font-family: var(--sub-font);
-  font-variation-settings: "wght" var(--wght-text);
   color: var(--text-bg);
 }
 
@@ -342,6 +340,7 @@
   display: flex;
   align-content: space-between;
   margin-block-start: 54px;
+  margin-block-end: 105px;
   background-color: var(--button-text-color);
 }
 
