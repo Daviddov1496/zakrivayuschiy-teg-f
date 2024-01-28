@@ -38,8 +38,8 @@
     }
 }
 /* Heart */
-.card__icon-button:focus-visible {
-  transition: border-color 0.3s ease;
+.like-icon {
+  transition: fill 0.3s ease-in 0.03s;
 }
 
 .like-icon
@@ -52,27 +52,33 @@
 .sparks,
 .core {
   fill: none;
-  transition: fill 0.3s ease-in-out;
 }
 
-.heart:hover .contour
-.main-body .core {
-  cursor: pointer;
+.heart .main-body {
+  transition: fill 0.3s ease-in;
 }
 
 .heart:hover .main-body {
-  transition: fill 0.3s ease-in-out 0.05s;
+  transition: fill 0.3s ease-in 0.05s;
+}
+
+.heart .core {
+  transition: fill 0.3s ease-in 0.03s;
 }
 
 .heart:hover .core {
-  transition: fill 0.3s ease-in-out 0.03s;
+  transition: fill 0.3s ease-in;
 }
 
 .like-icon.is-liked .sparks {
-  animation: sparksVis 0.3s ease-in-out forwards 0.3s;
+  animation: sparksVis 0.3s ease-in forwards 0.3s;
 }
 
 .like-icon.is-liked .heart {
-  animation: heartUP 0.3s ease-in-out;
+  animation: heartUP 0.3s ease-in 0.1s;
   transform-origin: center;
+}
+
+.like-icon .contour {
+  transition: fill 0.1s linear;
 }
