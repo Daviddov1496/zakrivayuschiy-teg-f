@@ -284,7 +284,7 @@
   height: 38px;
   width: 40px;
   cursor: pointer;
-  transition: border-color 0.3s ease, ;
+  transition: border-color 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -293,42 +293,6 @@
 
 .card__icon-button:focus-visible {
   border-color: 2px solid var(--main-color);
-}
-
-.contour {
-  fill: var(--hover-heart-color);
-}
-  
-.like-icon.is-liked .contour {
-  fill: var(--liked-heart-color);
-}
-
-.heart:hover .main-body {
-   fill: var(--hover-heart-color);
-}
-
-.heart:hover .core {
-  fill: var(--hover-heart-color);
-}
-
-.like-icon.is-liked .sparks {
-  fill: var(--liked-heart-color);
-}
-
-.like-icon.is-liked .main-body {
-  fill: var(--liked-heart-color);
-}
-
-.heart:active .main-body {
-  fill: var(--liked-heart-color);
-}
-  
-.heart:active .core {
-  fill: var(--liked-heart-color);
-}
-  
-.like-icon.is-liked .core {
-  fill: var(--liked-heart-color);
 }
 
 .footer {
