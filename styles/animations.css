@@ -70,17 +70,17 @@
 
 .heart:active .main-body {
   fill: var(--liked-heart-color);
-  transition: fill 0.3s linear;
+  transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon.is-liked .main-body {
   fill: var(--liked-heart-color);
-  transition: fill 0.3s linear;
+  transition: fill 0.3s linear  0.05s;
 }
 
 .contour {
   fill: var(--hover-heart-color);
-  transition: fill 0.3s linear 0.1s;
+  transition: fill 0.1s linear;
 }
 
 .like-icon.is-liked .contour {
